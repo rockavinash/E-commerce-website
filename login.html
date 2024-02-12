@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>LOGIN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Jost', sans-serif;
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+        }
+
+        .main {
+            width: 350px;
+            height: 500px;
+            background: rgb(46, 46, 154);
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 5px 20px 50px #000;
+        }
+
+        .login {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        label {
+            color: #fff;
+            font-size: 2.3em;
+            justify-content: center;
+            display: flex;
+            margin: 60px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .5s ease-in-out
+        }
+
+        .in1 {
+            width: 60%;
+            height: 20px;
+            background: #e0dede;
+            justify-content: center;
+            display: flex;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .in2 {
+            width: 60%;
+            height: 20px;
+            background: #e0dede;
+            justify-content: center;
+            display: flex;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .in3 {
+            width: 60%;
+            height: 40px;
+            margin: 10px auto;
+            justify-content: center;
+            display: block;
+            color: #fff;
+            background: #1955bc;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 20px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            transition: .2s ease-in;
+            cursor: pointer;
+        }
+
+        .new {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="login">
+            
+                <label>Log In</label>
+
+                <input class="in1" type="text" name="a" placeholder="User name" required="">
+                <input class="in2" type="password" name="b" placeholder="password" required="">
+               
+               <a href="e_commerce.html">
+                <input  class="in3" type="submit" value="log in">  </a>
+            
+            <br> <br>
+            <div class="new">new user?</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      background-color: #131a22;
+      padding: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .container>div {
+      flex-basis: 120px;
+    }
+
+    .container a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    .container div a:hover {
+      background-color: #303c55;
+      border-radius: 2px;
+    }
+
+    .product {
+      background-color: #303c55;
+      display: flex;
+      flex-wrap: wrap;
+      height: 30px;
+      justify-content: center;
+    }
+
+    .product>div {
+      flex-basis: 50px;
+      background-color: #303c55;
+      margin-left: 50px;
+      margin-top: 5px;
+    }
+
+    .product>div>a {
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    .product>div>a:hover {
+      border: 1px solid white;
+      border-radius: 3px;
+    }
+
+    .product ul {
+      list-style: none;
+      position: absolute;
+      padding: 0px;
+      margin: 6px;
+      background-color: #415172;
+      display: none;
+      width: 200px;
+    }
+
+    .product ul li {
+      padding: 10px;
+      margin: 5px;
+      border-left: 3px solid #415172;
+    }
+
+    .product ul li:hover {
+      background-color: #7a8397;
+      border-left: 3px solid #131a22;
+    }
+
+    .product a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .product>div:hover ul {
+      display: block;
+    }
+
+    .cards {
+      display: flex;
+      padding: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .cards a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .card {
+      margin: 15px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding: 0px;
+    }
+
+    .image {
+      height: 150px;
+      width: 180px;
+      margin: 10px;
+    }
+
+    .card .image img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .content {
+      min-height: 15px;
+      margin: auto;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
+      background-color: #131a22;
+    }
+
+    .footer a {
+      text-decoration: none;
+    }
+
+    .conclusion {
+      height: 300px;
+      background-color: #131a22;
+    }
+
+    .con1 {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #131a22;
+    }
+
+    .con1>ul {
+
+      list-style: none;
+      margin-left: 50px;
+      margin-top: 40px;
+      background-color: #131a22;
+    }
+
+    .con1 ul li {
+      color: white;
+      font-weight: bold;
+      margin-top: 4px;
+      padding: 2px;
+    }
+
+    .con1 ul li a {
+      color: white;
+      font-weight: lighter;
+    }
+
+    .con1 ul li a:hover {
+      border-bottom: 1px solid white;
+    }
+
+    .con2 {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      margin-left: 50px;
+      margin-right: 20px;
+      height: 230px;
+      width: 1px;
+      border-left: 1px solid white;
+    }
+
+    @media(max-width:1100px) {
+      .con2 {
+        display: none;
+      }
+    }
+
+    @media(max-width:1100px) {
+      .product {
+        display: none;
+      }
+    }
+
+    @media(max-width:480px) {
+      .card {
+        width: 130px;
+      }
+
+      .image {
+        width: 110px;
+      }
+    }
+
+    @media(max-width: 581px) {
+      .miss
+      {
+        display: none;
+      }
+      .login
+      {
+        justify-content: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="miss"><a href="e_commerce.html">Home</a></div>
+    <div class="miss"><a href="about.html">About</a></div>
+    <div class="miss"><a href="#">Contact</a></div>
+    <div class="login"><a href="login.html">Login</a></div>
+  </div>
+  <div class="product">
+    <div>
+      <a href="#">Men</a>
+      <ul>
+        <li><a
+            href="https://www.google.com/search?q=mens+shirts&oq=mens+shir&gs_lcrp=EgZjaHJvbWUqCggAEAAYsQMYgAQyCggAEAAYsQMYgAQyBggBEEUYOTIHCAIQABiABDINCAMQABiDARixAxiABDIHCAQQABiABDIHCAUQABiABDIJCAYQABgKGIAEMgYIBxBFGDyoAgCwAgA&sourceid=chrome&ie=UTF-8">Men's
+            Shirt</a></li>
+        <li><a href="https://www.google.com/search?q=mens+jeans&oq=men&gs_lcrp=EgZjaHJvbWUqDggBEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIOCAEQRRgnGDsYgAQYigUyBggCEEUYOzIGCAMQRRg5MgYIBBBFGDwyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgyNTg2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">Men's Jeans</a></li>
+        <li><a href="#">Men's Shoes</a></li>
+        <li><a href="#">Men's Jacket</a></li>
+        <li><a href="#">Men's Footwear</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="#">Female</a>
+      <ul>
+        <li><a href="#">Women's Shirt</a></li>
+        <li><a href="#">Women's Jeans</a></li>
+        <li><a href="#">Women's Shoes</a></li>
+        <li><a href="#">Women's Jwellery</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="#">Kids</a>
+      <ul>
+        <li><a href="#">Girls' Dresses</a></li>
+        <li><a href="#">Boy's Pants</a></li>
+        <li><a href="#">Kid's Sweter</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="#">Electronics</a>
+      <ul>
+        <li><a href="#">Smartphones</a></li>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Bluetooth</a></li>
+        <li><a href="#">Monitor</a></li>
+        <li><a href="#">Keyboard</a></li>
+        <li><a href="#">Printer</a></li>
+        <li><a href="#">Computer Peripherals</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="#">Appliances</a>
+      <ul>
+        <li><a href="#">Television</a></li>
+        <li><a href="#">Refrigerators</a></li>
+        <li><a href="#">Washing Machines</a></li>
+        <li><a href="#">Heaters</a></li>
+        <li><a href="#">Coolers</a></li>
+      </ul>
+    </div>
+    <div><input type="text" placeholder="search" class="search"></div>
+  </div>
+  <div class="cards">
+    <a href="camera.html">
+      <div class="card">
+        <div class="image">
+          <img src="img/camera1.webp" alt="camera">
+        </div>
+        <div class="content">
+          <p><b>Canon Camera</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="phone.html">
+      <div class="card">
+        <div class="image">
+          <img src="img/phone1.webp" alt="phone">
+        </div>
+        <div class="content">
+          <p><b>VIVO Phone</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="laptop.html">
+      <div class="card">
+        <div class="image">
+          <img src="img/laptop1.webp" alt="laptop">
+        </div>
+        <div class="content">
+          <p><b>HP Laptop</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="bottle.html">
+      <div class="card">
+        <div class="image">
+          <img src="img/bottle1.webp" alt="trimmer">
+        </div>
+        <div class="content">
+          <p><b>Fitkit Bottle</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="monitor.html">
+      <div class="card">
+        <div class="image">
+          <img src="img/monitor1.webp" alt="Monitor">
+        </div>
+        <div class="content">
+          <p><b>LG Monitor</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/laptop3.webp" alt="trimmer">
+        </div>
+        <div class="content">
+          <p><b>Samsung laptop</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/dumbbell1.webp" alt="projector">
+        </div>
+        <div class="content">
+          <p><b>dumbbell</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/toy1.webp" alt="toy">
+        </div>
+        <div class="content">
+          <p><b>Soft Toy</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/butter1.webp" alt="butter">
+        </div>
+        <div class="content">
+          <p><b>Butter</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/book1.webp" alt="butter">
+        </div>
+        <div class="content">
+          <p><b>Sherlock Holmes</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/nike1.jpg" alt="butter">
+        </div>
+        <div class="content">
+          <p><b>Nike Shoes</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/trimmer1.webp" alt="trimmer">
+        </div>
+        <div class="content">
+          <p><b>Trimmer</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/pendrive1.webp" alt="trimmer">
+        </div>
+        <div class="content">
+          <p><b>Sandisk Pendrive</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/helmet1.webp" alt="trimmer">
+        </div>
+        <div class="content">
+          <p><b>Helmet</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/keyboard1.webp" alt="trimmer">
+        </div>
+        <div class="content">
+          <p><b>Keyboard</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/laptop2.webp" alt="trimmer">
+        </div>
+        <div class="content">
+          <p><b>Asus Laptop</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/tata tea.webp" alt="trimmer">
+        </div>
+        <div class="content">
+          <p><b>Tata Tea</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/projector1.webp" alt="projector">
+        </div>
+        <div class="content">
+          <p><b>Projector</b></p>
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <div class="image">
+          <img src="img/muscleblaze.jpg" alt="projector">
+        </div>
+        <div class="content">
+          <p><b>Muscleblaze</b></p>
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+  <footer class="footer">
+    <div class="conclusion">
+      <div class="con1">
+        <ul>
+          <li>About</li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Stories</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Wholesale</a></li>
+          <li><a href="#">Cleartrip</a></li>
+          <li><a href="#">Corporate Information</a></li>
+        </ul>
+        <ul>
+          <li>Help</li>
+          <li><a href="#">Payments</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Cancelation & Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Report Infringement</a></li>
+        </ul>
+        <ul>
+          <li>Consumer Policy</li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Grievance Redressal</a></li>
+          <li><a href="#">EPR Compliance</a></li>
+        </ul>
+        <div class="con2"></div>
+        <ul>
+          <li>Social</li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="https://www.instagram.com/the_amit_mishra_1/">Instagram</a></li>
+        </ul>
+        <ul>
+          <li>Contact</li>
+          <li><a href="#">Email: abishekhdubey2907@gmail.com</a></li>
+          <li><a href="#">Address: United College Of Engineering And Research</a></li>
+          <li><a href="#">Pincode: 211008</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

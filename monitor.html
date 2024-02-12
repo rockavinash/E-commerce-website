@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monitor</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            background-color: #131a22;
+            padding: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .container>div {
+            flex-basis: 120px;
+        }
+
+        .container a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .container div a:hover {
+            background-color: #303c55;
+            border-radius: 2px;
+        }
+
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container2 img {
+            height: 80vh;
+        }
+
+        .image {
+            margin: 10px;
+            padding: 15px;
+            height: 450px;
+            width: 510px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px gray;
+        }
+
+        .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 5px;
+            margin: 5px;
+            width: 675px;
+            border: 1px solid black;
+        }
+
+        .btn1,
+        .btn2 {
+            background-color: rgb(119, 181, 26);
+            font-weight: bold;
+            border-radius: 5px;
+            ;
+            height: 50px;
+            width: 100px;
+        }
+
+        .btn1:hover,
+        .btn2:hover {
+            background-color: rgb(142, 206, 47);
+        }
+
+        .btn2 {
+            float: right;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        .conclusion {
+            height: 300px;
+            background-color: #131a22;
+        }
+
+        .con1 {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #131a22;
+        }
+
+        .con1>ul {
+
+            list-style: none;
+            margin-left: 20px;
+            margin-top: 40px;
+            background-color: #131a22;
+        }
+
+        .con1 ul li {
+            color: white;
+            font-weight: bold;
+            margin-top: 4px;
+            padding: 2px;
+        }
+
+        .con1 ul li a {
+            color: white;
+            font-weight: lighter;
+        }
+
+        .con1 ul li a:hover {
+            border-bottom: 1px solid white;
+        }
+
+        .con2 {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            margin-left: 50px;
+            margin-right: 20px;
+            height: 230px;
+            width: 1px;
+            border-left: 1px solid white;
+        }
+
+        h2 {
+            margin: 6px;
+            padding: 0px;
+        }
+
+        h3 {
+            margin-top: 0px;
+            margin-left: 7px;
+            padding: 0px;
+        }
+
+        @media(max-width:330px) {
+            .con2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div><a href="e_commerce.html">Home</a></div>
+        <div><a href="#">Products</a></div>
+        <div><a href="#">Contact</a></div>
+        <div><a href="#">Help</a></div>
+        <div><input type="text" placeholder="search" class="search"></div>
+    </div>
+    <div class="container2">
+        <div class="image">
+            <img src="img/monitor1.webp" alt="camera">
+        </div>
+        <div class="content">
+            <h2>LG 21.5 inch Full HD IPS Panel Ultra Thin Monitor</h2>
+            <h2>₹7599</h2>
+            <ul>
+                <li>Display 54.61 cm (21.5 inch) LED Backlit Display</li>
+                <li>Color Black</li>
+                <li>Resolution 1920 x 1080 pixels</li>
+                <li>Screen Resolution Type Full HD</li>
+                <li>Maximum Refresh Rate 75 Hz (Analog), 75 Hz (Digital)</li>
+                <li>Response Time 5 ms</li>
+                <li>Brightness 250 nits (2D)</li>
+                <li>Headphone Jack</li>
+                <li>Power Requirement 100~240V, (50/60Hz)</li>
+                <li>Power Consumption 0.3 W (Operational), 25.5 W</li>
+            </ul>
+            <button class="btn1">Buy</button>
+            <button class="btn2">Add To Cart</button>
+        </div>
+    </div>
+    <footer>
+        <div class="conclusion">
+            <div class="con1">
+                <ul>
+                    <li>About</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">Cleartrip</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                </ul>
+                <ul>
+                    <li>Help</li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Cancelation & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report Infringement</a></li>
+                </ul>
+                <ul>
+                    <li>Consumer Policy</li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Grievance Redressal</a></li>
+                    <li><a href="#">EPR Compliance</a></li>
+                </ul>
+                <div class="con2"></div>
+                <ul>
+                    <li>Social</li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+                <ul>
+                    <li>Contact</li>
+                    <li><a href="#">Email: abishekhdubey2907@gmail.com</a></li>
+                    <li><a href="#">Address: United College Of Engineering And Research</a></li>
+                    <li><a href="#">Pincode: 211008</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html

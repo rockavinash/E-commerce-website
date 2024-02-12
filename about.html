@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            background-color: #131a22;
+            padding: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .container>div {
+            flex-basis: 120px;
+        }
+
+        .container a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .container div a:hover {
+            background-color: #303c55;
+            border-radius: 2px;
+        }
+
+        .column1 {
+            float: left;
+            width: 29%;
+            margin-top: -3px;
+            padding: 20px 8px;
+            border: 2px solid gray;
+            border-radius: 30px;
+        }
+
+        .About {
+            text-align: center;
+            font-size: 19px;
+            background-color: aquamarine;
+            padding: 50px;
+        }
+
+        .center {
+            font-size: 60px;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+            margin-right: 42px;
+            padding: 20px 8px;
+            border: 2px solid gray;
+            border-radius: 30px;
+        }
+
+        .column1 {
+            float: left;
+            width: 29%;
+            /* margin-bottom: 16px; */
+            margin-top: -3px;
+            padding: 20px 8px;
+            border: 2px solid gray;
+            border-radius: 30px;
+        }
+
+        .About {
+            margin: 0px;
+            text-align: center;
+            background-color: aquamarine;
+            padding: 50px;
+        }
+
+        .heading{
+            margin: 0px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 248px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 7px;
+            box-shadow: 2px 2px 2px gray;
+        }
+
+        .image {
+            height: 278px;
+        }
+
+        .image>img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .content
+        {
+            text-align: center;
+        }
+        
+        .about2
+        {
+            background-color: #017bd4;
+            margin-top: 20px;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+            background-color: #131a22;
+        }
+
+        .footer a {
+            text-decoration: none;
+        }
+
+        .conclusion {
+            height: 300px;
+            background-color: #131a22;
+        }
+
+        .con1 {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #131a22;
+        }
+
+        .con1>ul {
+
+            list-style: none;
+            margin-left: 10px;
+            margin-top: 40px;
+            background-color: #131a22;
+        }
+
+        .con1 ul li {
+            color: white;
+            font-weight: bold;
+            margin-top: 4px;
+            padding: 2px;
+        }
+
+        .con1 ul li a {
+            color: white;
+            font-weight: lighter;
+        }
+
+        .con1 ul li a:hover {
+            border-bottom: 1px solid white;
+        }
+
+        .con2 {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            margin-left: 50px;
+            margin-right: 20px;
+            height: 230px;
+            width: 1px;
+            border-left: 1px solid white;
+        }
+
+        @media(max-width:1100px) {
+            .con2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div><a href="e_commerce.html">Home</a></div>
+        <div><a href="about.html">About</a></div>
+        <div><a href="#">Contact</a></div>
+        <div><a href="#">Login</a></div>
+    </div>
+    <div class="About">
+        <h1>About Us</h1>
+        <p>For us, it's not just about selling and moving on. It's about creating connections, understanding our customers, and growing together. We aim to foster a community, a space where your opinions matter, and your experiences shape our journey forward.
+            In essence, this is a map of our expedition into the digital shopping universe. It's a testament to our commitment to crafting an e-commerce platform that isn't just a website but an experience—one that's intuitive, engaging, and tailored to you. Join us as we navigate this digital odyssey, weaving innovation, consumer-centricity, and technology into the fabric of our e-commerce venture.</p>
+    </div>
+    <div class="center">
+        <h2 style="text-align: center" class="heading">Our Team</h2>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="image">
+                <img src="img/avi.jpg">
+            </div>
+            <div class="content">
+                <h2>Avinash tiwari</h2>
+                <p class="title"><strong>Founder</strong></p>
+                <p>I am working as a software engineer and cofounder of this website</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="img/me.png">
+            </div>
+            <div class="content">
+                <h2>Abishek dubey</h2>
+                <p class="title"><strong>CEO</strong></p>
+                <p>I am working as a software engineer and cofounder of this website</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="img/aman.jpg">
+            </div>
+            <div class="content">
+                <h2>Aman Tiwari</h2>
+                <p class="title"><strong>Co-Founder</strong></p>
+                <p>I am working as a software engineer and cofounder of this website</p>
+            </div>
+        </div>
+    </div>
+    <div class="About about2">
+        <h2>The Vision and the Venture</h2>
+        <p>Every great idea has its genesis. Ours emerged from a desire to bridge gaps, to make shopping simpler and more enjoyable. Our goal isn't just to sell products but to create an online haven where browsing feels like exploring, and each click is a step toward finding something special.Behind the scenes, our website is a playground of technology. We've tinkered with codes, integrated smart systems, and embraced user-friendly interfaces. Why? To ensure that when you visit, everything feels intuitive, seamless, and easy to use, whether you're a tech whiz or just getting acquainted with online shopping.</p>
+    </div>
+    <footer class="footer">
+        <div class="conclusion">
+            <div class="con1">
+                <ul>
+                    <li>About</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">Cleartrip</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                </ul>
+                <ul>
+                    <li>Help</li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Cancelation & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report Infringement</a></li>
+                </ul>
+                <ul>
+                    <li>Consumer Policy</li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Grievance Redressal</a></li>
+                    <li><a href="#">EPR Compliance</a></li>
+                </ul>
+                <div class="con2"></div>
+                <ul>
+                    <li>Social</li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+                <ul>
+                    <li>Contact</li>
+                    <li><a href="#">Email: codingavinash01@gmail.com</a></li>
+                    <li><a href="#">Address: United College Of Engineering And Research</a></li>
+                    <li><a href="#">Pincode: 211008</a></li>
+               </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
