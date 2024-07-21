@@ -6,220 +6,190 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Commerce</title>
   <style>
-    * {
-      margin: 0px;
-      padding: 0px;
-      box-sizing: border-box;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    .container {
-      display: flex;
-      gap: 20px;
-      background-color: #131a22;
-      padding: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
 
-    .container>div {
-      flex-basis: 120px;
-    }
+  .container {
+    display: flex;
+    gap: 20px;
+    background-color: #131a22;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .container a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 5px;
-    }
+  .container > div {
+    flex: 1;
+    min-width: 120px;
+  }
 
-    .container div a:hover {
-      background-color: #303c55;
-      border-radius: 2px;
-    }
+  .container a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
 
-    .product {
-      background-color: #303c55;
-      display: flex;
-      flex-wrap: wrap;
-      height: 30px;
-      justify-content: center;
-    }
+  .container a:hover {
+    background-color: #303c55;
+    border-radius: 4px;
+  }
 
-    .product>div {
-      flex-basis: 50px;
-      background-color: #303c55;
-      margin-left: 50px;
-      margin-top: 5px;
-    }
+  .product {
+    background-color: #303c55;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+  }
 
-    .product>div>a {
-      font-weight: bold;
-      padding: 5px;
-    }
+  .product > div {
+    position: relative;
+    background-color: #303c55;
+    margin: 5px;
+  }
 
-    .product>div>a:hover {
-      border: 1px solid white;
-      border-radius: 3px;
-    }
+  .product a {
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+  }
 
-    .product ul {
-      list-style: none;
-      position: absolute;
-      padding: 0px;
-      margin: 6px;
-      background-color: #415172;
-      display: none;
-      width: 200px;
-    }
+  .product ul {
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: #415172;
+    display: none;
+    width: 200px;
+    top: 100%;
+    left: 0;
+  }
 
-    .product ul li {
-      padding: 10px;
-      margin: 5px;
-      border-left: 3px solid #415172;
-    }
+  .product ul li {
+    padding: 10px;
+    margin: 0;
+    border-left: 3px solid #415172;
+  }
 
-    .product ul li:hover {
-      background-color: #7a8397;
-      border-left: 3px solid #131a22;
-    }
+  .product ul li:hover {
+    background-color: #7a8397;
+    border-left: 3px solid #131a22;
+  }
 
-    .product a {
-      color: white;
-      text-decoration: none;
-    }
+  .product a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
 
-    .product>div:hover ul {
-      display: block;
-    }
+  .product > div:hover ul {
+    display: block;
+  }
 
-    .cards {
-      display: flex;
-      padding: 5px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  .search {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
 
-    .cards a {
-      text-decoration: none;
-      color: black;
-    }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
 
-    .card {
-      margin: 15px;
-      width: 200px;
-      display: flex;
-      flex-direction: column;
-      border-radius: 5px;
-      border: 1px solid gray;
-      padding: 0px;
-    }
+  .cards a {
+    text-decoration: none;
+    color: black;
+  }
 
-    .image {
-      height: 150px;
-      width: 180px;
-      margin: 10px;
-    }
+  .card {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
 
-    .card .image img {
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-    }
+  .card:hover {
+    transform: translateY(-5px);
+  }
 
-    .content {
-      min-height: 15px;
-      margin: auto;
-    }
+  .image img {
+    width: 100%;
+    height: auto;
+  }
 
+  .content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .footer {
+    background-color: #131a22;
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .footer ul {
+    list-style: none;
+  }
+
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
     .footer {
-      display: flex;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card {
+      width: 100%;
+    }
+
+    .container, .product {
       flex-direction: column;
-      margin: 0px;
-      background-color: #131a22;
+      align-items: center;
     }
 
-    .footer a {
-      text-decoration: none;
+    .search {
+      width: auto;
     }
-
-    .conclusion {
-      height: 300px;
-      background-color: #131a22;
-    }
-
-    .con1 {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #131a22;
-    }
-
-    .con1>ul {
-
-      list-style: none;
-      margin-left: 50px;
-      margin-top: 40px;
-      background-color: #131a22;
-    }
-
-    .con1 ul li {
-      color: white;
-      font-weight: bold;
-      margin-top: 4px;
-      padding: 2px;
-    }
-
-    .con1 ul li a {
-      color: white;
-      font-weight: lighter;
-    }
-
-    .con1 ul li a:hover {
-      border-bottom: 1px solid white;
-    }
-
-    .con2 {
-      margin-top: 40px;
-      margin-bottom: 30px;
-      margin-left: 50px;
-      margin-right: 20px;
-      height: 230px;
-      width: 1px;
-      border-left: 1px solid white;
-    }
-
-    @media(max-width:1100px) {
-      .con2 {
-        display: none;
-      }
-    }
-
-    @media(max-width:1100px) {
-      .product {
-        display: none;
-      }
-    }
-
-    @media(max-width:480px) {
-      .card {
-        width: 130px;
-      }
-
-      .image {
-        width: 110px;
-      }
-    }
-
-    @media(max-width: 581px) {
-      .miss
-      {
-        display: none;
-      }
-      .login
-      {
-        justify-content: left;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
@@ -287,7 +257,7 @@
     <a href="camera.html">
       <div class="card">
         <div class="image">
-          <img src="./camera1.webp" alt="camera" >
+          <img src="img/camera1.webp" alt="camera">
         </div>
         <div class="content">
           <p><b>Canon Camera</b></p>
@@ -297,7 +267,7 @@
     <a href="phone.html">
       <div class="card">
         <div class="image">
-          <img src="./phone1.webp" alt="phone">
+          <img src="img/phone1.webp" alt="phone">
         </div>
         <div class="content">
           <p><b>VIVO Phone</b></p>
@@ -307,7 +277,7 @@
     <a href="laptop.html">
       <div class="card">
         <div class="image">
-          <img src="./laptop1.webp" alt="laptop">
+          <img src="img/laptop1.webp" alt="laptop">
         </div>
         <div class="content">
           <p><b>HP Laptop</b></p>
@@ -317,7 +287,7 @@
     <a href="bottle.html">
       <div class="card">
         <div class="image">
-          <img src="./bottle1.webp" alt="trimmer">
+          <img src="img/bottle1.webp" alt="trimmer">
         </div>
         <div class="content">
           <p><b>Fitkit Bottle</b></p>
@@ -327,77 +297,77 @@
     <a href="monitor.html">
       <div class="card">
         <div class="image">
-          <img src="./monitor1.webp" alt="Monitor">
+          <img src="img/monitor1.webp" alt="Monitor">
         </div>
         <div class="content">
           <p><b>LG Monitor</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="laptop.html">
       <div class="card">
         <div class="image">
-          <img src="./laptop3.webp" alt="trimmer">
+          <img src="img/laptop3.webp" alt="trimmer">
         </div>
         <div class="content">
           <p><b>Samsung laptop</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="Dumbel.html">
       <div class="card">
         <div class="image">
-          <img src="./dumbbell1.webp" alt="projector">
+          <img src="img/dumbbell1.webp" alt="projector">
         </div>
         <div class="content">
           <p><b>dumbbell</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="softToy.html">
       <div class="card">
         <div class="image">
-          <img src="./toy1.webp" alt="toy">
+          <img src="img/toy1.webp" alt="toy">
         </div>
         <div class="content">
           <p><b>Soft Toy</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="butter.html">
       <div class="card">
         <div class="image">
-          <img src="./butter1.webp" alt="butter">
+          <img src="img/butter1.webp" alt="butter">
         </div>
         <div class="content">
           <p><b>Butter</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="book.html">
       <div class="card">
         <div class="image">
-          <img src="./book1.webp" alt="butter">
+          <img src="img/book1.webp" alt="butter">
         </div>
         <div class="content">
           <p><b>Sherlock Holmes</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="nike.html">
       <div class="card">
         <div class="image">
-          <img src="./nike1.jpg" alt="butter">
+          <img src="img/nike1.jpg" alt="butter">
         </div>
         <div class="content">
           <p><b>Nike Shoes</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="trimmer.html">
       <div class="card">
         <div class="image">
-          <img src="./trimmer1.webp" alt="trimmer">
+          <img src="img/trimmer1.webp" alt="trimmer">
         </div>
         <div class="content">
           <p><b>Trimmer</b></p>
@@ -407,74 +377,80 @@
     <a href="#">
       <div class="card">
         <div class="image">
-          <img src="./pendrive1.webp" alt="trimmer">
+          <img src="img/pendrive1.webp" alt="trimmer">
         </div>
         <div class="content">
           <p><b>Sandisk Pendrive</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="helmet.html">
       <div class="card">
         <div class="image">
-          <img src="./helmet1.webp" alt="trimmer">
+          <img src="img/helmet1.webp" alt="trimmer">
         </div>
         <div class="content">
           <p><b>Helmet</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="keyboard.html">
       <div class="card">
         <div class="image">
-          <img src="./keyboard1.webp" alt="trimmer">
+          <img src="img/keyboard1.webp" alt="trimmer">
         </div>
         <div class="content">
           <p><b>Keyboard</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="laptop.html">
       <div class="card">
         <div class="image">
-          <img src="./laptop2.webp" alt="trimmer">
+          <img src="img/laptop2.webp" alt="trimmer">
         </div>
         <div class="content">
           <p><b>Asus Laptop</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="tea.html">
       <div class="card">
         <div class="image">
-          <img src="./tata tea.webp" alt="trimmer">
+          <img src="img/tata tea.webp" alt="trimmer">
         </div>
         <div class="content">
           <p><b>Tata Tea</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="projector.html">
       <div class="card">
         <div class="image">
-          <img src="./projector1.webp" alt="projector">
+          <img src="img/projector1.webp" alt="projector">
         </div>
         <div class="content">
           <p><b>Projector</b></p>
         </div>
       </div>
     </a>
-    <a href="#">
+    <a href="muscle.html">
       <div class="card">
         <div class="image">
-          <img src="./muscleblaze.jpg" alt="projector">
+          <img src="img/muscleblaze.jpg" alt="muscle">
         </div>
         <div class="content">
           <p><b>Muscleblaze</b></p>
+          
         </div>
       </div>
     </a>
-  </div>
+    
+
+        
+    
+    
+  
   </div>
   <footer class="footer">
     <div class="conclusion">
@@ -502,8 +478,8 @@
           <li>Consumer Policy</li>
           <li><a href="#">Terms of Use</a></li>
           <li><a href="#">Security</a></li>
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Sitemap </a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Sitemap</a></li>
           <li><a href="#">Grievance Redressal</a></li>
           <li><a href="#">EPR Compliance</a></li>
         </ul>
