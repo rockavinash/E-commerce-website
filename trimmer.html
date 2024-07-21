@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trimmer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            background-color: #131a22;
+            padding: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .container>div {
+            flex-basis: 120px;
+        }
+
+        .container a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .container div a:hover {
+            background-color: #303c55;
+            border-radius: 2px;
+        }
+
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image {
+            margin: 10px;
+            padding: 15px;
+            height: 450px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px gray;
+            background-color: white;
+        }
+
+        .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 10px;
+            max-width: 600px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px gray;
+        }
+
+        h2, h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn1, .btn2 {
+            background-color: rgb(119, 181, 26);
+            font-weight: bold;
+            border-radius: 5px;
+            height: 50px;
+            width: 100px;
+            cursor: pointer;
+            margin: 10px 5px;
+            border: none;
+            color: white;
+        }
+
+        .btn1:hover, .btn2:hover {
+            background-color: rgb(142, 206, 47);
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            background-color: #131a22;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .conclusion {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .con1 {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #131a22;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .con1>ul {
+            list-style: none;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .con1 ul li {
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 2px;
+        }
+
+        .con1 ul li a {
+            font-weight: lighter;
+        }
+
+        .con1 ul li a:hover {
+            border-bottom: 1px solid white;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .popup button {
+            background-color: rgb(119, 181, 26);
+            font-weight: bold;
+            border-radius: 5px;
+            height: 30px;
+            width: 60px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+
+        .popup button:hover {
+            background-color: rgb(142, 206, 47);
+        }
+
+        @media (max-width: 768px) {
+            .container2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image, .content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 330px) {
+            .con2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div><a href="e_commerce.html">Home</a></div>
+        <div><a href="#">Products</a></div>
+        <div><a href="#">Contact</a></div>
+        <div><a href="#">Help</a></div>
+        <div><input type="text" placeholder="search" class="search"></div>
+    </div>
+    <div class="container2">
+        <div class="image">
+            <img src="img/trimmer1.webp" alt="trimmer">
+        </div>
+        <div class="content">
+            <h2>Philips Series 3000 Beard and Stubble Trimmer - BT3221/15</h2>
+            <h3>₹1,800</h3>
+            <ul>
+                <li>Powerful Battery</li>
+                <li>20 Length Settings</li>
+                <li>Self-Sharpening Blades</li>
+                <li>Ergonomic Design</li>
+                <li>Easy to Clean</li>
+                <li>Battery Indicator</li>
+                <li>Cordless Use</li>
+                <li>45 Minutes Runtime</li>
+                <li>2 Years Warranty</li>
+            </ul>
+            <button class="btn1" onclick="buyNow()">Buy</button>
+            <button class="btn2" onclick="addToCart()">Add To Cart</button>
+        </div>
+    </div>
+    <footer>
+        <div class="conclusion">
+            <div class="con1">
+                <ul>
+                    <li>About</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">Cleartrip</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                </ul>
+                <ul>
+                    <li>Help</li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Cancelation & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report Infringement</a></li>
+                </ul>
+                <ul>
+                    <li>Consumer Policy</li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Grievance Redressal</a></li>
+                    <li><a href="#">EPR Compliance</a></li>
+                </ul>
+                <div class="con2"></div>
+                <ul>
+                    <li>Social</li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+                <ul>
+                    <li>Contact</li>
+                    <li><a href="#">Email: abishekhdubey2907@gmail.com</a></li>
+                    <li><a href="#">Address: United College Of Engineering And Research</a></li>
+                    <li><a href="#">Pincode: 211008</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup" id="popup">
+        <p>Item added to cart!</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        function addToCart() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function buyNow() {
+            alert("Proceed to buy!");
+        }
+    </script>
+</body>
+
+</html>
