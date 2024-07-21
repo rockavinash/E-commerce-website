@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bottle</title>
+    <title>Bottle</title>
     <style>
         body {
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
 
         .container {
@@ -39,10 +42,8 @@
         .container2 {
             display: flex;
             flex-wrap: wrap;
-        }
-
-        .container2 img {
-            height: 80vh;
+            justify-content: center;
+            padding: 20px;
         }
 
         .image {
@@ -52,6 +53,7 @@
             border: 1px solid gray;
             border-radius: 5px;
             box-shadow: 2px 2px 2px gray;
+            background-color: white;
         }
 
         .image img {
@@ -61,63 +63,76 @@
         }
 
         .content {
-            padding: 5px;
-            margin: 5px;
-            width: 675px;
+            padding: 20px;
+            margin: 10px;
+            max-width: 600px;
             border: 1px solid black;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px gray;
         }
 
-        .btn1,
-        .btn2 {
+        h2, h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn1, .btn2 {
             background-color: rgb(119, 181, 26);
             font-weight: bold;
             border-radius: 5px;
-            ;
             height: 50px;
             width: 100px;
+            cursor: pointer;
+            margin: 10px 5px;
+            border: none;
+            color: white;
         }
 
-        .btn2 {
-            float: right;
+        .btn1:hover, .btn2:hover {
+            background-color: rgb(142, 206, 47);
         }
 
         .footer {
             display: flex;
             flex-direction: column;
+            background-color: #131a22;
+            color: white;
+            padding: 20px 0;
         }
 
-        footer a {
+        .footer a {
             text-decoration: none;
+            color: white;
         }
 
         .conclusion {
-            height: 300px;
-            background-color: #131a22;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .con1 {
             display: flex;
             flex-wrap: wrap;
             background-color: #131a22;
+            justify-content: space-around;
+            width: 100%;
         }
 
         .con1>ul {
-
             list-style: none;
-            margin-left: 20px;
-            margin-top: 40px;
-            background-color: #131a22;
+            margin: 20px;
+            padding: 0;
         }
 
         .con1 ul li {
-            color: white;
             font-weight: bold;
-            margin-top: 4px;
+            margin-top: 10px;
             padding: 2px;
         }
 
         .con1 ul li a {
-            color: white;
             font-weight: lighter;
         }
 
@@ -125,33 +140,46 @@
             border-bottom: 1px solid white;
         }
 
-        .con2 {
-            margin-top: 40px;
-            margin-bottom: 30px;
-            margin-left: 50px;
-            margin-right: 20px;
-            height: 230px;
-            width: 1px;
-            border-left: 1px solid white;
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1000;
         }
 
-        h2 {
-            margin: 6px;
-            padding: 0px;
+        .popup button {
+            background-color: rgb(119, 181, 26);
+            font-weight: bold;
+            border-radius: 5px;
+            height: 30px;
+            width: 60px;
+            cursor: pointer;
+            border: none;
+            color: white;
         }
 
-        h3 {
-            margin-top: 0px;
-            margin-left: 7px;
-            padding: 0px;
-        }
-
-        .btn1:hover,
-        .btn2:hover {
+        .popup button:hover {
             background-color: rgb(142, 206, 47);
         }
-        
-        @media(max-width:330px) {
+
+        @media (max-width: 768px) {
+            .container2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image, .content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 330px) {
             .con2 {
                 display: none;
             }
@@ -169,20 +197,24 @@
     </div>
     <div class="container2">
         <div class="image">
-            <img src="img/bottle1.webp" alt="camera">
+            <img src="img/bottle1.webp" alt="bottle">
         </div>
         <div class="content">
-            <h2>FITKIT Classic Bottle 700 ml Shaker  (Pack of 1, Black, Plastic)</h2>
-            <h3>₹198</h3>
+            <h2>ThermoFlask Stainless Steel Water Bottle with Straw Lid - 24 oz</h2>
+            <h3>₹1,200</h3>
             <ul>
-                <li>Body Material Plastic</li>
-                <li>Type Shaker</li>
-                <li>Model Name Classic Bottle</li>
-                <li>Sales Package Shaker bottle</li>
-                <li>Net Quantity 1</li>
+                <li>Double Wall Insulation</li>
+                <li>24 oz Capacity</li>
+                <li>Stainless Steel Construction</li>
+                <li>Leak-proof Straw Lid</li>
+                <li>BPA-free</li>
+                <li>Wide Mouth for Ice Cubes</li>
+                <li>Fits Most Cupholders</li>
+                <li>Keeps Drinks Cold for 24 Hours</li>
+                <li>Keeps Drinks Hot for 12 Hours</li>
             </ul>
-            <button class="btn1">Buy</button>
-            <button class="btn2">Add To Cart</button>
+            <button class="btn1" onclick="buyNow()">Buy</button>
+            <button class="btn2" onclick="addToCart()">Add To Cart</button>
         </div>
     </div>
     <footer>
@@ -233,6 +265,27 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup" id="popup">
+        <p>Item added to cart!</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        function addToCart() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function buyNow() {
+            alert("Proceed to buy!");
+        }
+    </script>
 </body>
 
-</html
+</html>
+
+
